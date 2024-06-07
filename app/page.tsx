@@ -4,6 +4,7 @@ async function getUserData() {
   await new Promise((r) => setTimeout(r, 3000));
   const response = await axios.get("http://localhost:3000/api/user");
   return response.data;
+  
 }
 export default async function Home() {
   const userDetails = await getUserData();
